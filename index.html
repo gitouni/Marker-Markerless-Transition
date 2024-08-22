@@ -35,6 +35,7 @@
   <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
   <link rel="stylesheet"
   href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/pointer.css">
   <link rel="stylesheet" href="static/css/index.css">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -43,6 +44,7 @@
   <script src="static/js/bulma-carousel.min.js"></script>
   <script src="static/js/bulma-slider.min.js"></script>
   <script src="static/js/index.js"></script>
+  <script src="static/js/picture_switch.js"></script>
 </head>
 <body>
 
@@ -261,57 +263,11 @@
       </div>
       
       <!--/ Visual Effects. -->
-
-      <!-- Matting. -->
-      <div class="column">
-        <div class="columns is-centered">
-          <div class="column content">
-           
-            <div id="example4" class="bal-container-small">
-              <div class="bal-after">
-                <img src="static/images/imq_cmp/TacDiff_0116.bmp">
-                <div class="bal-afterPosition afterLabel">
-                  Ours
-                </div>
-              </div>
-            
-              <div class="bal-before">
-                <div class="bal-before-inset">
-                <img src="static/images/imq_cmp/pix2pix_0116.bmp">
-                  <div class="bal-beforePosition beforeLabel">
-                    pix2pix
-                  </div>
-                </div>
-              </div>
-            
-              <div class="bal-handle">
-                <span class=" handle-left-arrow"></span>
-                <span class="handle-right-arrow"></span>
-              </div>
-            
-            </div>
-
-            <div id="example5" class="bal-container-small">
-              <div class="bal-after">
-                <img src="static/images/imq_cmp/TacDiff_0116.bmp">
-                <div class="bal-afterPosition afterLabel">
-                  Ours
-                </div>
-              </div>
-            
-              <div class="bal-before">
-                <div class="bal-before-inset">
-                <img src="static/images/imq_cmp/gt_0116.png">
-                  <div class="bal-beforePosition beforeLabel">
-                    Ground Truth
-                  </div>
-                </div>
-              </div>
-            
-              <div class="bal-handle">
-                <span class=" handle-left-arrow"></span>
-                <span class="handle-right-arrow"></span>
-              </div>
+    <div class="overlay-wrapper">
+        <img id="image1" src="static/images/imq_cmp/TacDiff_0116.bmp" class="image">
+        <div id="pointer"></div>
+        <img id="image2" src="static/images/imq_cmp/pix2pix_0116.bmp" class="image">
+    </div>
             
             </div>
           </div>
