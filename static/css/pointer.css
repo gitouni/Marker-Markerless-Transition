@@ -1,0 +1,19 @@
+.overlay-wrapper {
+    position: relative;
+}
+
+.image {
+    position: absolute;
+    top: 0;
+    width: 50%;
+    height: 100%;
+}
+
+#pointer {
+    position: absolute;
+    top: 0;
+    width: 2px;
+    height: 100%;
+    background-color: black;
+    cursor: ew-resize;
+}
