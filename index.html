@@ -45,6 +45,21 @@
   <script src="static/js/bulma-slider.min.js"></script>
   <script src="static/js/index.js"></script>
   <script src="static/js/picture_switch.js"></script>
+  <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: center;
+        }
+        video {
+            width: 100px;
+            height: auto;
+        }
+    </style>
 </head>
 <body>
 
@@ -247,50 +262,32 @@
 
 
 <!-- Video carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title is-3">Grasping with Slip Detection Feedback</h2>
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-video1">
-          <video poster="" id="video1" controls muted width="240">
-            <!-- Your video file here -->
-            <source src="static/videos/grasp1.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video2">
-          <video poster="" id="video2" controls muted width="240">
-            <!-- Your video file here -->
-            <source src="static/videos/grasp2.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video3">
-          <video poster="" id="video3" controls muted width="240">\
-            <!-- Your video file here -->
-            <source src="static/videos/grasp3.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video4">
-          <video poster="" id="video4" controls muted width="240">\
-            <!-- Your video file here -->
-            <source src="static/videos/grasp4.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video5">
-          <video poster="" id="video5" controls muted width="240">\
-            <!-- Your video file here -->
-            <source src="static/videos/grasp5.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+<table>
+    <thead>
+        <tr>
+            <th>Vision</th>
+            <th>Markerless</th>
+            <th>Pseudo Marker Motions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><video controls src="gripper_res_video/vision/vision_00.mp4"></video></td>
+            <td><video controls src="gripper_res_video/vision/vision_01.mp4"></video></td>
+            <td><video controls src="gripper_res_video/vision/vision_04.mp4"></video></td>
+        </tr>
+        <tr>
+            <td><video controls src="gripper_res_video/markerless/markerless_00.mp4"></video></td>
+            <td><video controls src="gripper_res_video/markerless/markerless_01.mp4"></video></td>
+            <td><video controls src="gripper_res_video/markerless/markerless_04.mp4"></video></td>
+        </tr>
+        <tr>
+            <td><video controls src="gripper_res_video/ann/ann_00.mp4"></video></td>
+            <td><video controls src="gripper_res_video/ann/ann_01.mp4"></video></td>
+            <td><video controls src="gripper_res_video/ann/ann_04.mp4"></video></td>
+        </tr>
+    </tbody>
+</table>
 <!-- End video carousel -->
 
 
