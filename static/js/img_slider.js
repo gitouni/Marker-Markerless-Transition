@@ -1,38 +1,24 @@
-<script>
-  let allow = false;
-   
-  // 滑动
-  const move = (clientY) => {
-    $("#bar").css("transform", `translate3d(0px, ${clientY - 100}px, 0px)`);
-    $("#clip").css("clip", `rect(auto, auto, ${clientY - 100}px, auto)`);
-    $("#root").css("cursor", `ns-resize`);
-  };
-  
-  // 停止
-  const stop = () => {
-    allow = false;
-    $("#root").css("cursor", "unset");
-  };
-  
-  // 鼠标事件
-  $("#root").on({
-    mousedown: function(e) {
-      allow = true;
-      move(e.clientY);
-    },
-    mousemove: function(e) {
-      if (allow) {
-        move(e.clientY);
-      }
-    },
-    mouseup: function(e) {
-      stop();
-    },
-  });
+document.addEventListener("DOMContentLoaded", () => {
+    const slider = document.querySelector(".image-slider");
+    const handle = document.querySelector(".slider-handle");
+    const imageA = document.querySelector(".imageA");
+    const imageB = document.querySelector(".imageB");
 
-  $(document).on("mouseup", () => {
-    stop();
-  });
-</script>
+    slider.addEventListener("mousemove", (event) => {
+        const rect = slider.getBoundingClientRect();
+        const offsetX = event.clientX - rect.left; // 鼠标在容器内的相对X坐标
+        const percentage = (offsetX / rect.width) * 100; // 转换为百分比
 
-// https://juejin.cn/post/7216613455192375356
+        // 调整图片裁剪区域和滑块位置
+        imageA.style.clipPath = `inset(0 ${100 - percentage}% 0 0)`;
+        imageB.style.clipPath = `inset(0 0 0 ${percentage}%)`;
+        handle.style.left = `${percentage}%`;
+    });
+
+    slider.addEventListener("mouseleave", () => {
+        // 鼠标离开时恢复初始状态
+        imageA.style.clipPath = "inset(0 50% 0 0)";
+        imageB.style.clipPath = "inset(0 0 0 50%)";
+        handle.style.left = "50%";
+    });
+});
