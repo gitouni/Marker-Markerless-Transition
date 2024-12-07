@@ -1,44 +1,43 @@
-// 最外层容器
-#root {
-    width: 600px;
-    height: 24rem;
+/* 外框容器 */
+.image-slider {
     position: relative;
-    overflow: hidden;
-    user-select: none;
-    margin: 100px auto;
+    width: 600px;
+    height: 400px;
+    border: 2px solid #ccc; /* 添加外轮廓 */
+    overflow: hidden; /* 限制图片显示区域 */
+    cursor: pointer;
 }
 
-// 不用动的底图
-#root .changed-img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    max-width: 100%;
-    box-sizing: border-box;
-    object-fit: cover;
-    object-position: center center;
-}
-
-// 需要根据鼠标事件改高度的图
-#root #clip {
+/* 图片样式 */
+.image {
     position: absolute;
-    top: 0px;
-    left: 0px;
-    width: 100%;
+    top: 0;
     height: 100%;
-    will-change: clip;
-    user-select: none;
-    clip: rect(auto, auto, 206px, auto);
-}
-
-#root #clip .origin-img {
-    display: block;
     width: 100%;
-    height: 100%;
-    max-width: 100%;
-    box-sizing: border-box;
     object-fit: cover;
-    object-position: center center;
+    transition: clip-path 0.1s ease-in-out;
 }
 
-// https://juejin.cn/post/7216613455192375356
+/* 图片A默认显示全图 */
+.imageA {
+    clip-path: inset(0 50% 0 0); /* 左侧显示，右侧被遮挡 */
+}
+
+/* 图片B默认完全被遮挡 */
+.imageB {
+    clip-path: inset(0 0 0 50%); /* 右侧显示，左侧被遮挡 */
+}
+
+/* 滑块样式 */
+.slider-handle {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 5px;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-left: 1px solid #888;
+    border-right: 1px solid #888;
+    transform: translateX(-50%);
+    pointer-events: none; /* 避免鼠标影响 */
+}
