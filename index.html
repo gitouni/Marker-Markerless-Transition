@@ -45,21 +45,6 @@
   <script src="static/js/bulma-slider.min.js"></script>
   <script src="static/js/index.js"></script>
   <script src="static/js/picture_switch.js"></script>
-  <style>
-        table {
-            width: 60%;
-            border-collapse: collapse;
-        }
-        th, td {
-            border: 1px solid #ccc;
-            padding: 10px;
-            text-align: center;
-        }
-        video {
-            width: 300px;
-            height: auto;
-        }
-    </style>
 </head>
 <body>
 
@@ -262,7 +247,7 @@
 
 
 <!-- Video carousel -->
-<table>
+<!-- <table>
     <thead>
         <tr>
             <th>Vision</th>
@@ -287,7 +272,44 @@
           <td><video controls src="gripper_res_video/ann/ann_04.mp4"></video></td>
         </tr>
     </tbody>
-</table>
+</table> -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title is-3">Grasping with Slip Detection Feedback</h2>
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item item-video1">
+          <video poster="" id="video1" controls muted width="1230">
+            <!-- Your video file here -->
+            <source src="static/concat_videos/concat_1.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-video2">
+          <video poster="" id="video2" controls muted width="1230">
+            <!-- Your video file here -->
+            <source src="static/concat_videos/concat_2.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-video3">
+          <video poster="" id="video3" controls muted width="1230">\
+            <!-- Your video file here -->
+            <source src="static/concat_videos/concat_3.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-video4">
+          <video poster="" id="video4" controls muted width="1230">\
+            <!-- Your video file here -->
+            <source src="static/concat_videos/concat_4.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 <!-- End video carousel -->
 
 
