@@ -1,63 +1,33 @@
-.image-compare {
+
+.image-slider {
     position: relative;
-    max-width: 800px;
-    margin: 2rem auto;
+    width: 600px;
+    height: 400px;
+    overflow: hidden;
 }
 
 .image-container {
-    position: relative;
-    overflow: hidden;
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-}
-
-.image-before,
-.image-after {
-    width: 100%;
-    height: auto;
-    display: block;
-}
-
-.image-after {
     position: absolute;
     top: 0;
-    right: 0;
-    width: 50%; /* 初始显示比例 */
+    left: 0;
+    width: 200%;
+    height: 100%;
+    display: flex;
 }
 
-.slider {
-    position: absolute;
-    -webkit-appearance: none;
-    appearance: none;
-    width: 100%;
+.image-container img {
+    width: 50%;
     height: 100%;
-    background: transparent;
-    outline: none;
-    margin: 0;
-    z-index: 2;
-    cursor: col-resize;
+    object-fit: cover;
 }
 
-.slider-line {
+.slider-overlay {
     position: absolute;
-    height: 100%;
-    width: 4px;
-    background: #fff;
+    top: 0;
     left: 50%;
-    transform: translateX(-50%);
+    width: 50%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
     pointer-events: none;
-    box-shadow: 0 0 8px rgba(0,0,0,0.3);
-}
-
-.slider-button {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translateX(-50%);
-    background: #fff;
-    padding: 8px;
-    border-radius: 50%;
-    cursor: pointer;
-    z-index: 3;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    transition: left 0.1s ease-in-out;
 }
