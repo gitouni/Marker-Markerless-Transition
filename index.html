@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+  <!-- Replace the content tag with appropriate information -->
+  <meta name="description" content="DESCRIPTION META TAG">
+  <meta property="og:title" content="SOCIAL MEDIA TITLE TAG"/>
+  <meta property="og:description" content="SOCIAL MEDIA DESCRIPTION TAG TAG"/>
+  <meta property="og:url" content="https://marker-markerless-transition.github.io/"/>
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
+  <meta property="og:image" content="static/image/your_banner_image.png" />
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/>
+
+
+  <meta name="twitter:title" content="TWITTER BANNER TITLE META TAG">
+  <meta name="twitter:description" content="TWITTER BANNER DESCRIPTION META TAG">
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
+  <meta name="twitter:image" content="static/images/your_twitter_banner_image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- Keywords for your paper to be indexed by-->
+  <meta name="keywords" content="KEYWORDS SHOULD BE PLACED HERE">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <title>marker-markerless-transition</title>
+  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+  rel="stylesheet">
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/pointer.css">
+  <link rel="stylesheet" href="static/css/index.css">
+  <link rel="stylesheet" href="static/css/img_slider.css">
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
+  <script src="static/js/img_slider.js"></script>
+</head>
+<body>
+
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">Marker or Markerless? Mode-Switchable Optical Tactile Sensing for Diverse Robot Tasks</h1>
+            <div class="is-size-5 publication-authors">
+              <!-- Paper authors -->
+              <span class="author-block">
+                <a href="https://scholar.google.com/citations?user=FW3OeUQAAAAJ&hl=zh-CN" target="_blank">Ni Ou</a>,</span>
+                <span class="author-block">
+                  <a href="https://scholar.google.com/citations?user=nCGtKkQAAAAJ&hl=zh-CN&oi=sra" target="_blank">Zhuo Chen</a>,</span>
+                  <span class="author-block">
+                    <a href="https://shanluo.github.io/" target="_blank">Shan Luo</a>
+                  </span>
+                  </div>
+
+                  <div class="is-size-5 publication-authors">
+                    <span class="author-block">King's College London<br>Preprint 2023</span>
+                  </div>
+
+                  <div class="column has-text-centered">
+                    <div class="publication-links">
+                         <!-- Arxiv PDF link -->
+                      <span class="link-block">
+                        <a href="https://ieeexplore.ieee.org/abstract/document/10643674/" target="_blank"
+                        class="external-link button is-normal is-rounded is-dark">
+                        <span class="icon">
+                          <i class="fas fa-file-pdf"></i>
+                        </span>
+                        <span>Paper</span>
+                      </a>
+                    </span>
+
+                    <!-- Supplementary PDF link -->
+                    <span class="link-block">
+                      <a href="https://github.com/gitouni/Marker-Markerless-Transition/releases/download/dataset/paired_dataset.zip" target="_blank"
+                      class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon">
+                        <i class="fas fa-file-pdf"></i>
+                      </span>
+                      <span>data</span>
+                    </a>
+                  </span>
+
+                  <!-- Github link -->
+                  <span class="link-block">
+                    <a href="https://github.com/gitouni/SparseReg" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                  </a>
+                </span>
+
+                <!-- ArXiv abstract Link -->
+                <span class="link-block">
+                  <a href="https://arxiv.org/pdf/2408.08276" target="_blank"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Teaser video-->
+<!-- <section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <video poster="" id="tree" autoplay controls muted loop height="100%">
+        <source src="static/videos/banner_video.mp4"
+        type="video/mp4">
+      </video>
+      <h2 class="subtitle has-text-centered">
+        Aliquam vitae elit ullamcorper tellus egestas pellentesque. Ut lacus tellus, maximus vel lectus at, placerat pretium mi. Maecenas dignissim tincidunt vestibulum. Sed consequat hendrerit nisl ut maximus. 
+      </h2>
+    </div>
+  </div>
+</section> -->
+<!-- End teaser video -->
+
+<!-- Paper abstract -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Optical tactile sensors play a pivotal role in robot perception and manipulation tasks. The membrane of these sensors can be painted with markers or remain markerless, enabling them to function in either marker or markerless mode. However, this uni-modal selection means the sensor is only suitable for either manipulation or perception tasks. While markers are vital for manipulation, they can also obstruct the camera, thereby impeding perception. The dilemma of selecting between marker and markerless modes presents a significant obstacle. To address this issue, we propose a novel mode-switchable optical tactile sensing approach that facilitates transitions between the two modes. The marker-to-markerless transition is achieved through a generative model, whereas its inverse transition is realized using a sparsely supervised regressive model. Our approach allows a single-mode optical sensor to operate effectively in both marker and markerless modes without the need for additional hardware, making it well-suited for both perception and manipulation tasks. Extensive experiments validate the effectiveness of our method. Specifically, our approach achieves high recognition accuracy of 97.5%. Meanwhile, our method attains a high success rate of 92.59% in slip detection for manipulation tasks.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End paper abstract -->
+
+<!-- Image carousel -->
+<!-- <section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <div id="results-carousel" class="carousel results-carousel">
+       <div class="item">
+        <img src="static/images/carousel1.jpg" alt="MY ALT TEXT"/>
+        <h2 class="subtitle has-text-centered">
+          First image description.
+        </h2>
+      </div>
+      <div class="item">
+        <img src="static/images/carousel2.jpg" alt="MY ALT TEXT"/>
+        <h2 class="subtitle has-text-centered">
+          Second image description.
+        </h2>
+      </div>
+      <div class="item">
+        <img src="static/images/carousel3.jpg" alt="MY ALT TEXT"/>
+        <h2 class="subtitle has-text-centered">
+         Third image description.
+       </h2>
+     </div>
+     <div class="item">
+      <img src="static/images/carousel4.jpg" alt="MY ALT TEXT"/>
+      <h2 class="subtitle has-text-centered">
+        Fourth image description.
+      </h2>
+    </div>
+  </div>
+</div>
+</div>
+</section> -->
+<!-- End image carousel -->
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3">Marker-Markerless Vision Comparison</h2>
+    <div class="content has-text-justified">
+      <p>
+
+      </p>
+    </div>
+      <!--/ Visual Effects. -->
+    <div class="overlay-wrapper">
+        <img id="image1" src="static/images/imq_cmp/TacDiff_0116.bmp" class="image">
+        <div id="pointer"></div>
+        <img id="image2" src="static/images/imq_cmp/pix2pix_0116.bmp" class="image">
+    </div>
+  </div>
+</section>
+      
+      <!--/ Visual Effects. -->
+    <div class="overlay-wrapper">
+        <img id="image1" src="static/images/imq_cmp/TacDiff_0116.bmp" class="image">
+        <div id="pointer"></div>
+        <img id="image2" src="static/images/imq_cmp/pix2pix_0116.bmp" class="image">
+    </div>
+            
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Youtube video -->
+<!-- <section class="hero is-small is-light">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title is-3">Video Presentation</h2>
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          
+          <div class="publication-video">
+            <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section> -->
+<!-- End youtube video -->
+
+
+<!-- Video carousel -->
+<!-- <table>
+    <thead>
+        <tr>
+            <th>Vision</th>
+            <th>Markerless</th>
+            <th>Pseudo Marker Motions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><video controls src="gripper_res_video/vision/vision_00.mp4"></video></td>
+            <td><video controls src="gripper_res_video/vision/vision_01.mp4"></video></td>
+            <td><video controls src="gripper_res_video/vision/vision_04.mp4"></video></td>
+        </tr>
+        <tr>
+          <td><video controls src="gripper_res_video/markerless/markerless_00.mp4"></video></td>
+          <td><video controls src="gripper_res_video/markerless/markerless_01.mp4"></video></td>
+          <td><video controls src="gripper_res_video/markerless/markerless_04.mp4"></video></td>
+        </tr>
+        <tr>
+          <td><video controls src="gripper_res_video/ann/ann_00.mp4"></video></td>
+          <td><video controls src="gripper_res_video/ann/ann_01.mp4"></video></td>
+          <td><video controls src="gripper_res_video/ann/ann_04.mp4"></video></td>
+        </tr>
+    </tbody>
+</table> -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title is-3">Grasping with Slip Detection Feedback</h2>
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item item-video1">
+          <video poster="" id="video1" controls muted width="1230">
+            <!-- Your video file here -->
+            <source src="static/videos/concat_1.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-video2">
+          <video poster="" id="video2" controls muted width="1230">
+            <!-- Your video file here -->
+            <source src="static/videos/concat_2.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-video3">
+          <video poster="" id="video3" controls muted width="1230">\
+            <!-- Your video file here -->
+            <source src="static/videos/concat_3.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-video4">
+          <video poster="" id="video4" controls muted width="1230">\
+            <!-- Your video file here -->
+            <source src="static/videos/concat_4.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End video carousel -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title is-3">Marker to Markerless</h2>
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item item-video1">
+          <video poster="" id="wm_to_wom1" controls muted width="1230">
+            <!-- Your video file here -->
+            <source src="static/videos/wm_to_wom_1.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-video2">
+          <video poster="" id="wm_to_wom2" controls muted width="1230">
+            <!-- Your video file here -->
+            <source src="static/videos/wm_to_wom_2.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-video3">
+          <video poster="" id="wm_to_wom3" controls muted width="1230">\
+            <!-- Your video file here -->
+            <source src="static/videos/wm_to_wom_3.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-video4">
+          <video poster="" id="wm_to_wom4" controls muted width="1230">\
+            <!-- Your video file here -->
+            <source src="static/videos/wm_to_wom_4.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-video5">
+          <video poster="" id="wm_to_wom5" controls muted width="1230">\
+            <!-- Your video file here -->
+            <source src="static/videos/wm_to_wom_5.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-video6">
+          <video poster="" id="wm_to_wom6" controls muted width="1230">\
+            <!-- Your video file here -->
+            <source src="static/videos/wm_to_wom_6.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-video7">
+          <video poster="" id="wm_to_wom7" controls muted width="1230">\
+            <!-- Your video file here -->
+            <source src="static/videos/wm_to_wom_7.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-video8">
+          <video poster="" id="wm_to_wom8" controls muted width="1230">\
+            <!-- Your video file here -->
+            <source src="static/videos/wm_to_wom_8.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title is-3">Markerless to Marker</h2>
+      <div id="results-carouse2" class="carouse2 results-carouse2">
+        <div class="item item-video1">
+          <video poster="" id="wm_to_wom1" controls muted width="1230">
+            <!-- Your video file here -->
+            <source src="static\videos\markerless_to_marker.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Paper poster -->
+<!-- <section class="hero is-small is-light">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title">Poster</h2>
+
+      <iframe  src="static/pdfs/sample.pdf" width="100%" height="550">
+          </iframe>
+        
+      </div>
+    </div>
+  </section> -->
+<!--End paper poster -->
+
+
+<!--BibTex citation -->
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>@article{ou2024marker,
+  title={Marker or Markerless? Mode-Switchable Optical Tactile Sensing for Diverse Robot Tasks},
+  author={Ou, Ni and Chen, Zhuo and Luo, Shan},
+  journal={IEEE Robotics and Automation Letters},
+  year={2024},
+  publisher={IEEE}
+}</code></pre>
+    </div>
+</section>
+<!--End BibTex citation -->
+
+
+  <footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+
+          <p>
+            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+            You are free to borrow the of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Statcounter tracking code -->
+  
+<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+
+    <!-- End of Statcounter Code -->
+
+  </body>
+  </html>
