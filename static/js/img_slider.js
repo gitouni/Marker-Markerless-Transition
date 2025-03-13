@@ -1,24 +1,42 @@
-document.addEventListener("DOMContentLoaded", () => {
-    const slider = document.querySelector(".image-slider");
-    const overlay = document.querySelector(".slider-overlay");
-    const imageContainer = document.querySelector(".image-container");
+document.addEventListener('DOMContentLoaded', () => {
+    const slider = document.querySelector('.slider');
+    const imageAfter = document.querySelector('.image-after');
+    const sliderLine = document.querySelector('.slider-line');
+    const sliderButton = document.querySelector('.slider-button');
 
-    slider.addEventListener("mousemove", (event) => {
-        const rect = slider.getBoundingClientRect();
-        const offsetX = event.clientX - rect.left; // 获取鼠标相对于 slider 的 X 坐标
-        const sliderWidth = slider.offsetWidth;
-
-        // 调整覆盖层位置
-        const percentage = (offsetX / sliderWidth) * 100;
-        overlay.style.left = `${percentage}%`;
-
-        // 调整图片容器位置
-        imageContainer.style.transform = `translateX(-${percentage}%)`;
+    // 滑块拖动事件
+    slider.addEventListener('input', (e) => {
+        const value = e.target.value;
+        imageAfter.style.width = `${value}%`;
+        sliderLine.style.left = `${value}%`;
+        sliderButton.style.left = `${value}%`;
     });
 
-    slider.addEventListener("mouseleave", () => {
-        // 鼠标离开时重置状态
-        overlay.style.left = "50%";
-        imageContainer.style.transform = "translateX(-50%)";
+    // 鼠标拖拽交互增强
+    let isDragging = false;
+    
+    sliderButton.addEventListener('mousedown', () => {
+        isDragging = true;
+        document.body.classList.add('dragging');
+    });
+
+    document.addEventListener('mousemove', (e) => {
+        if (isDragging) {
+            const container = document.querySelector('.image-compare');
+            const rect = container.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const percentage = (x / rect.width) * 100;
+            
+            const clamped = Math.max(0, Math.min(100, percentage));
+            slider.value = clamped;
+            imageAfter.style.width = `${clamped}%`;
+            sliderLine.style.left = `${clamped}%`;
+            sliderButton.style.left = `${clamped}%`;
+        }
+    });
+
+    document.addEventListener('mouseup', () => {
+        isDragging = false;
+        document.body.classList.remove('dragging');
     });
 });
