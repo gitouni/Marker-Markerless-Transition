@@ -140,19 +140,7 @@
   </div>
 </section> -->
 <!-- End teaser video -->
-<div class="image-compare">
-    <!-- 基础图片容器 -->
-    <div class="image-container">
-        <img src="static/images/imq_cmp/NS_0116.bmp" alt="图片A" class="image-before">
-        <img src="static/images/imq_cmp/gt_0116.png" alt="图片B" class="image-after">
-    </div>
-    
-    <!-- 滑块控件 -->
-    <input type="range" class="slider" min="0" max="100" value="50">
-    <div class="slider-line"></div>
-</div>
 
-<script src="static/js/img_slider.js"></script>
 <!-- Paper abstract -->
 <section class="section hero is-light">
   <div class="container is-max-desktop">
@@ -327,7 +315,7 @@
   <div class="hero-body">
     <div class="container">
       <h2 class="title is-3">Marker to Markerless</h2>
-      <div id="results-carouse2" class="carouse2 results-carouse2">
+      <div id="results-carousel" class="carousel results-carousel">
         <div class="item item-video1">
           <video poster="" id="wm_to_wom1" controls muted width="1230">
             <!-- Your video file here -->
@@ -388,11 +376,26 @@
     </div>
   </div>
 </section>
-
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title is-3">Markerless to Marker</h2>
+      <div id="results-carouse2" class="carouse2 results-carouse2">
+        <div class="item item-video1">
+          <video poster="" id="wm_to_wom1" controls muted width="1230">
+            <!-- Your video file here -->
+            <source src="static\videos\markerless_to_marker.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 
 <!-- Paper poster -->
-<section class="hero is-small is-light">
+<!-- <section class="hero is-small is-light">
   <div class="hero-body">
     <div class="container">
       <h2 class="title">Poster</h2>
@@ -402,7 +405,7 @@
         
       </div>
     </div>
-  </section>
+  </section> -->
 <!--End paper poster -->
 
 
